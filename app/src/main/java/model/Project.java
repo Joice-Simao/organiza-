@@ -20,6 +20,7 @@ public class Project {
     
     public Project(){
         this.createdAt = new Date();
+        this.updateAt = new Date();
     }
 
     public int getId() {
@@ -64,8 +65,6 @@ public class Project {
 
     @Override
     public String toString() {
-        return "Project{" + "id=" + id + ", name=" + name 
-                + ", description=" + description + ", createdAt=" 
-                + createdAt + ", updateAt=" + updateAt + '}';
+        return this.name;
     }   
 }

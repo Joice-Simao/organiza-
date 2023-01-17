@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.Project;
@@ -103,7 +102,20 @@ public class ProjectController {
         } catch(Exception ex){
             throw new RuntimeException("Erro ao buscar os projetos" + ex.getMessage(), ex);
         } finally {
-            ConnectionFactory.closeConnection(connection, statement, resultSet);
+           // ConnectionFactory.closeConnection(connection, statement, resultSet);
+           try {
+                if (resultSet != null) {
+                    resultSet.close();
+                }
+                if (statement != null) {
+                    statement.close();
+                }
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (Exception ex) {
+                throw new RuntimeException("Erro ao fechar a conexão", ex);
+            }
         }        
         return projects;
     }    
