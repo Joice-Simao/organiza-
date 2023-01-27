@@ -17,14 +17,12 @@ public class Task {
     public Task(){
         this.completed = false;
         this.createdAt = new Date();
-        this.updateAt = new Date();
-        
+        this.updateAt = new Date();        
     }
 
-
-    public Task(int id, int idProject, String name, String description, boolean isCompleted, String notes, Date deadline, Date createdAt, Date updateAt) {
+    public Task(int id, String name, String description, boolean isCompleted, String notes, Date deadline, Date createdAt, Date updateAt) {
         this.id = id;
-        this.idProject = idProject;
+        //this.idProject = idProject;
         this.name = name;
         this.description = description;
         this.completed = isCompleted;
@@ -107,9 +105,9 @@ public class Task {
         this.updateAt = updateAt;
     }
 
-    @Override
-    public String toString() {
-        return "Task{" + "id=" + id + ", idProject=" + idProject + ", name=" + name + ", description=" + description + ", completed=" + completed + ", notes=" + notes + ", deadline=" + deadline + ", createdAt=" + createdAt + ", updateAt=" + updateAt + '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Task{" + "id=" + id + ", idProject=" + idProject + ", name=" + name + ", description=" + description + ", completed=" + completed + ", notes=" + notes + ", deadline=" + deadline + ", createdAt=" + createdAt + ", updateAt=" + updateAt + '}';
+//    }
 
 }

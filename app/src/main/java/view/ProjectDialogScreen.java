@@ -16,10 +16,8 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        controller = new ProjectController();
-            
+        controller = new ProjectController();            
     }
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -148,17 +146,21 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
     }//GEN-LAST:event_jTextFieldNameActionPerformed
 
     private void jLabelToolbarSaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelToolbarSaveMouseClicked
-        
         try {
-            Project project = new Project();
-            project.setName(jTextFieldName.getText());
-            project.setDescription(jTextAreaDescription.getText());        
-            controller.save(project);        
-            JOptionPane.showMessageDialog(rootPane,"Projeto salvo com sucesso");
+            if (!jTextFieldName.getText().equals("")){
+                Project project = new Project();
+                project.setName(jTextFieldName.getText());
+                project.setDescription(jTextAreaDescription.getText());        
+                controller.save(project);        
+                JOptionPane.showMessageDialog(rootPane,"Projeto salvo com sucesso");
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(rootPane, 
+            "O campo nome não foi preenchido");
+            }
         }catch (Exception e){
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }          
-        this.dispose();
     }//GEN-LAST:event_jLabelToolbarSaveMouseClicked
 
     /**

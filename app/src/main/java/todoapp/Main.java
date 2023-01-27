@@ -17,12 +17,12 @@ import util.ConnectionFactory;
 public class Main {
     
      public static void main(String[] args) throws SQLException {
-
-//        ProjectController projectController = new ProjectController();//         
-//        Project project = new Project();
-//        project.setName("Projeto teste");
-//        project.setDescription("description");         
-//          projectController.save(project);  
+/*
+        ProjectController projectController = new ProjectController();//         
+        Project project = new Project();
+        project.setName("Projeto teste");
+        project.setDescription("description");         
+          projectController.save(project);  
 
         ProjectController projectController = new ProjectController();        
         Project project = new Project();
@@ -34,18 +34,18 @@ public class Main {
           List<Project> projects = projectController.getAll();
           System.out.println("Total de projetos = "+projects.size());
   
-//        projectController.removeById(2);
+        projectController.removeById(2);
    
 
-//        TaskController taskController = new TaskController();        
-//        Task task = new Task();
-//        task.setIdProject(1);
-//        task.setName("Teste task");
-//        task.setDescription("description");
-//        task.setNotes("No notes here");
-//        task.setCompleted(false);
-//        task.setDeadline(new Date());
-//        taskController.save(task);
+        TaskController taskController = new TaskController();        
+        Task task = new Task();
+        task.setIdProject(1);
+        task.setName("Teste task");
+        task.setDescription("description");
+        task.setNotes("No notes here");
+        task.setCompleted(false);
+        task.setDeadline(new Date());
+        taskController.save(task);
         
         
         TaskController taskController = new TaskController();        
@@ -59,11 +59,11 @@ public class Main {
         task.setDeadline(new Date());
         taskController.update(task);
 
-//          taskController.removeById(3);
-//
+          taskController.removeById(3);
+
         List<Task> tasks = taskController.getAll();
         System.out.println("Total de tasks = "+tasks.size());
-         
+*/        
 
          
      }

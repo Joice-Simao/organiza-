@@ -36,7 +36,7 @@ public class TaskController {
             throw new RuntimeException("Erro ao salvar tarefa" 
                     + ex.getMessage(), ex);
         }finally {
-           // ConnectionFactory.closeConnection(connection,statement);   
+            ConnectionFactory.closeConnection(connection,statement);   
            try {
                 if (statement != null) {
                     statement.close();
@@ -78,7 +78,7 @@ public class TaskController {
         }        
     }
     
-    public void removeById(int taskId) throws SQLException{        
+    public void removeById(int taskId) {        
         String sql = "DELETE FROM tasks WHERE id = ?";
         
         Connection connection = null;
@@ -96,23 +96,22 @@ public class TaskController {
         }        
     }
     
-    public List<Task> getAll(){        
-        String sql = "SELECT * FROM tasks";
+    public List<Task> getAll(int idProject){        
+        String sql = "SELECT * FROM tasks WHERE idProject = ?";
+                
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         
         List<Task> tasks = new ArrayList<Task>();
-        
+                
         try{
             connection = ConnectionFactory.getConnection();
             statement = connection.prepareStatement(sql);
-          //statement.setInt(1, idProject);
+            statement.setInt(1, idProject);
             resultSet = statement.executeQuery();
             
-            while(resultSet.next()){
-                
-       
+            while(resultSet.next()){      
                 Task task = new Task();
                 task.setId(resultSet.getInt("id"));
                 task.setIdProject(resultSet.getInt("idProject"));
@@ -145,5 +144,60 @@ public class TaskController {
         }         
         return tasks;
     }
-        
+/*  
+    public List<Task> getByProjectId(int id) {
+        String sql = "SELECT * FROM tasks where idProject = ?";
+
+        List<Task> tasks = new ArrayList<>();
+
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        ResultSet resultSet = null;
+
+        try {
+            connection = ConnectionFactory.getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setInt(1, id);
+
+            resultSet = statement.executeQuery();
+            
+            while (resultSet.next()) {
+
+                Task task = new Task();
+
+                task.setId(resultSet.getInt("id"));
+                task.setIdProject(resultSet.getInt("idProject"));
+                task.setName(resultSet.getString("name"));
+                task.setDescription(resultSet.getString("description"));             
+                task.setNotes(resultSet.getString("notes"));
+                task.setDeadline(resultSet.getDate("deadline"));
+                task.setCompleted(resultSet.getBoolean("completed"));
+                task.setCreatedAt(resultSet.getDate("createdAt"));
+                task.setUpdateAt(resultSet.getDate("updatedAt"));
+
+                //Adiciono o contato recuperado, a lista de contatos
+                tasks.add(task);
+            }
+        } catch (SQLException ex) {
+            throw new RuntimeException("Erro ao buscar as tarefas", ex);
+        } finally {
+            try {
+                if (resultSet != null) {
+                    resultSet.close();
+                }
+                if (statement != null) {
+                    statement.close();
+                }
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException ex) {
+                throw new RuntimeException("Erro ao fechar a conexão", ex);
+            }
+        }
+        return tasks;
+    } 
+*/
 }
