@@ -127,7 +127,6 @@ public class TaskController {
         } catch(Exception ex){
             throw new RuntimeException("Erro ao inserir a tarefa" + ex.getMessage(), ex);
         } finally {
-            //ConnectionFactory.closeConnection(connection, statement, resultSet);
                try {
                 if (resultSet != null) {
                     resultSet.close();
@@ -144,60 +143,5 @@ public class TaskController {
         }         
         return tasks;
     }
-/*  
-    public List<Task> getByProjectId(int id) {
-        String sql = "SELECT * FROM tasks where idProject = ?";
 
-        List<Task> tasks = new ArrayList<>();
-
-        Connection connection = null;
-        PreparedStatement statement = null;
-
-        ResultSet resultSet = null;
-
-        try {
-            connection = ConnectionFactory.getConnection();
-            statement = connection.prepareStatement(sql);
-
-            statement.setInt(1, id);
-
-            resultSet = statement.executeQuery();
-            
-            while (resultSet.next()) {
-
-                Task task = new Task();
-
-                task.setId(resultSet.getInt("id"));
-                task.setIdProject(resultSet.getInt("idProject"));
-                task.setName(resultSet.getString("name"));
-                task.setDescription(resultSet.getString("description"));             
-                task.setNotes(resultSet.getString("notes"));
-                task.setDeadline(resultSet.getDate("deadline"));
-                task.setCompleted(resultSet.getBoolean("completed"));
-                task.setCreatedAt(resultSet.getDate("createdAt"));
-                task.setUpdateAt(resultSet.getDate("updatedAt"));
-
-                //Adiciono o contato recuperado, a lista de contatos
-                tasks.add(task);
-            }
-        } catch (SQLException ex) {
-            throw new RuntimeException("Erro ao buscar as tarefas", ex);
-        } finally {
-            try {
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-                if (statement != null) {
-                    statement.close();
-                }
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException ex) {
-                throw new RuntimeException("Erro ao fechar a conexão", ex);
-            }
-        }
-        return tasks;
-    } 
-*/
 }

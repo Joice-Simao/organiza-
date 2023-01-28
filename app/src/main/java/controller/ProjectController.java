@@ -101,8 +101,7 @@ public class ProjectController {
             }                
         } catch(Exception ex){
             throw new RuntimeException("Erro ao buscar os projetos" + ex.getMessage(), ex);
-        } finally {
-           // ConnectionFactory.closeConnection(connection, statement, resultSet);
+        } finally {          
            try {
                 if (resultSet != null) {
                     resultSet.close();

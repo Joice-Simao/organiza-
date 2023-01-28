@@ -35,19 +35,18 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanelToolbar.setBackground(new java.awt.Color(0, 153, 102));
+        jPanelToolbar.setBackground(new java.awt.Color(153, 102, 45));
 
         jLabelToolbarSave.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelToolbarSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/check.png"))); // NOI18N
+        jLabelToolbarSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/save.png"))); // NOI18N
         jLabelToolbarSave.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelToolbarSaveMouseClicked(evt);
             }
         });
 
-        jLabelToolBarTitle.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabelToolBarTitle.setForeground(java.awt.Color.white);
-        jLabelToolBarTitle.setText("Projeto");
+        jLabelToolBarTitle.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        jLabelToolBarTitle.setText(" Projeto");
 
         javax.swing.GroupLayout jPanelToolbarLayout = new javax.swing.GroupLayout(jPanelToolbar);
         jPanelToolbar.setLayout(jPanelToolbarLayout);
@@ -72,7 +71,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
 
         jPanelProject.setBackground(java.awt.Color.white);
 
-        jLabelName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabelName.setText("Nome");
 
         jTextFieldName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -82,7 +81,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
             }
         });
 
-        jLabelDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelDescription.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabelDescription.setText("Descrição");
 
         jTextAreaDescription.setColumns(20);
@@ -113,8 +112,8 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelDescription)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
