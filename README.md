@@ -18,16 +18,16 @@
 Organiza! é uma aplicação para o gerenciamento de projetos e as tarefas envolvidas nesses projetos, tem como objetivo auxiliar na questão de organização de tarefas de um ou vários projetos.
 
 ### 🔧Tecnologias
-	- Java 
-	- MySQL
+- Java 
+- MySQL
 	
 ### 🔷Funcionalidades
-	- [X] Permitir criar o projeto
-	- [X] Permitir alterar o projeto
-	- [X] Permitir deletar o projeto
-	- [X] Permitir criar a tarefa
-	- [X] Permitir alterar a tarefa
-	- [X] Permitir deletar a tarefa
+- [X] Permitir criar o projeto
+- [X] Permitir alterar o projeto
+- [X] Permitir deletar o projeto
+- [X] Permitir criar a tarefa
+- [ ] Permitir alterar a tarefa
+- [X] Permitir deletar a tarefa
 
 ### 🎬Demonstração
 	gravar
