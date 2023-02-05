@@ -10,7 +10,7 @@
  <a href="#funcionalidades">Funcionalidades</a> •
  <a href="#demonstração">Demonstração</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
+ <a href="#contribuição">Contribuição</a> • 
  <a href="#autor">Autor</a>
 </p>
 
@@ -18,8 +18,8 @@
 Organiza! é uma aplicação para o gerenciamento de projetos e as tarefas envolvidas nesses projetos, tem como objetivo auxiliar na questão de organização de tarefas de um ou vários projetos.
 
 ### 🔧Tecnologias
-	Java 
-	Mysql
+	- Java 
+	- MySQL
 	
 ### 🔷Funcionalidades
 	- [X] Permitir criar o projeto
@@ -31,6 +31,10 @@ Organiza! é uma aplicação para o gerenciamento de projetos e as tarefas envol
 
 ### 🎬Demonstração
 	gravar
+	
+### 🤝🏽Contribuição
+<p>Agradecimentos ao instrutor <a href="https://github.com/marciomichelluzzi">Marcio Michelluzzi 👨🏽‍🏫</a></p>
+<p>Sou grata a <a href="https://www.capgemini.com/br-pt/">Capgemini</a> por oferecer a oportunidade de participar do <a href="https://startcapgemini.com.br/?utm_source=Site+Capgemini&utm_medium=site&utm_campaign=site-capgemini-br&utm_id=site-capgemini-br-cta">Programa Start Capgemini ⭐</a></p>	
 	
 ### 👩🏽‍💻Autor
 ---
