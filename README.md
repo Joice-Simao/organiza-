@@ -5,9 +5,6 @@
 	🚧  Em construção...  🚧
 </h4>
 
-### 📃Sobre 
-Organiza! é uma aplicação para o gerenciamento de projetos e as tarefas envolvidas nesses projetos, tem como objetivo auxiliar na questão de organização de tarefas de um ou vários projetos.
-
 <p align="center">
  <a href="#sobre">Sobre</a> •
  <a href="#funcionalidades">Funcionalidades</a> •
@@ -16,6 +13,9 @@ Organiza! é uma aplicação para o gerenciamento de projetos e as tarefas envol
  <a href="#contribuicao">Contribuição</a> • 
  <a href="#autor">Autor</a>
 </p>
+
+### 📃Sobre 
+Organiza! é uma aplicação para o gerenciamento de projetos e as tarefas envolvidas nesses projetos, tem como objetivo auxiliar na questão de organização de tarefas de um ou vários projetos.
 
 ### 🔧Tecnologias
 	Java 
