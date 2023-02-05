@@ -42,4 +42,6 @@ Organiza! é uma aplicação para o gerenciamento de projetos e as tarefas envol
  <b>Joice Simão🌱</b>
 <p>Entre em contato!</p>
 
-[![Linkedin Badge](https://img.shields.io/badge/-Joice-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/joice-sim%C3%A3o-leite-520496221/)](https://www.linkedin.com/in/joice-sim%C3%A3o-leite-520496221/)   [![Hotmail Badge](https://img.shields.io/badge/-joice.simao@hotmail.com-0078D4?style=flat-square&logo=microsoft-outlook&logoColor=white&link=mailto:joice.simao@hotmail.com)](mailto:joice.simao@hotmail.com)
+<a href="https://www.linkedin.com/in/joice-sim%C3%A3o-leite-520496221/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&link=mailto:https://www.linkedin.com/in/joice-sim%C3%A3o-leite-520496221/"></a>
+<a href="https://discord.com/users/876857533036363806" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank"></a>
+<a href = "mailto:joice.simao@hotmail.com"><img src="https://img.shields.io/badge/-Hotmail-%23333?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a>
