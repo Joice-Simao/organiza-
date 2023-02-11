@@ -45,8 +45,6 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelToolBar = new javax.swing.JPanel();
         jLabelToolBarSubtitle = new javax.swing.JLabel();
         jLabelToolBarTitle = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jPanelProjects = new javax.swing.JPanel();
         jLabelProjectsTitle = new javax.swing.JLabel();
         jLabelProjectsAdd = new javax.swing.JLabel();
@@ -94,7 +92,7 @@ public class MainScreen extends javax.swing.JFrame {
         jTableTasks.setToolTipText("AAA");
         jTableTasks.setGridColor(new java.awt.Color(204, 204, 204));
         jTableTasks.setRowHeight(50);
-        jTableTasks.setSelectionBackground(new java.awt.Color(245, 218, 122));
+        jTableTasks.setSelectionBackground(new java.awt.Color(224, 224, 224));
         jTableTasks.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTableTasks.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTableTasks.setShowGrid(false);
@@ -110,60 +108,49 @@ public class MainScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 800));
 
-        jPanelToolBar.setBackground(new java.awt.Color(230, 221, 188));
+        jPanelToolBar.setBackground(new java.awt.Color(1, 38, 119));
 
         jLabelToolBarSubtitle.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabelToolBarSubtitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelToolBarSubtitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelToolBarSubtitle.setText("Facilitando seu dia a dia");
 
         jLabelToolBarTitle.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        jLabelToolBarTitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelToolBarTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelToolBarTitle.setText("Organiza");
-
-        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/calendar.png"))); // NOI18N
-
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/calendar.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelToolBarLayout = new javax.swing.GroupLayout(jPanelToolBar);
         jPanelToolBar.setLayout(jPanelToolBarLayout);
         jPanelToolBarLayout.setHorizontalGroup(
             jPanelToolBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelToolBarLayout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanelToolBarLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanelToolBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelToolBarTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelToolBarSubtitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(55, 55, 55))
+                    .addComponent(jLabelToolBarSubtitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanelToolBarLayout.setVerticalGroup(
             jPanelToolBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelToolBarLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(jPanelToolBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelToolBarLayout.createSequentialGroup()
-                        .addComponent(jLabelToolBarTitle)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelToolBarSubtitle))
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelToolBarTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelToolBarSubtitle)
+                .addGap(12, 12, 12))
         );
 
-        jPanelProjects.setBackground(new java.awt.Color(153, 102, 45));
+        jPanelProjects.setBackground(new java.awt.Color(94, 205, 224));
         jPanelProjects.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabelProjectsTitle.setBackground(new java.awt.Color(153, 102, 45));
         jLabelProjectsTitle.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabelProjectsTitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelProjectsTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelProjectsTitle.setText(" Projetos");
+        jLabelProjectsTitle.setText("  Projetos");
 
-        jLabelProjectsAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
+        jLabelProjectsAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/more.png"))); // NOI18N
         jLabelProjectsAdd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelProjectsAddMouseClicked(evt);
@@ -184,21 +171,22 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelProjectsLayout.setVerticalGroup(
             jPanelProjectsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelProjectsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelProjectsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelProjectsTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelProjectsAdd))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelProjectsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelProjectsAdd)
+                    .addComponent(jLabelProjectsTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
-        jPanelTasks.setBackground(new java.awt.Color(153, 102, 45));
+        jPanelTasks.setBackground(new java.awt.Color(94, 205, 224));
         jPanelTasks.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabelTasksTitle.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabelTasksTitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTasksTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelTasksTitle.setText("   Tarefas");
+        jLabelTasksTitle.setText("  Tarefas");
 
-        jLabelTasksAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
+        jLabelTasksAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/more.png"))); // NOI18N
         jLabelTasksAdd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelTasksAddMouseClicked(evt);
@@ -210,8 +198,8 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelTasksLayout.setHorizontalGroup(
             jPanelTasksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelTasksLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelTasksTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabelTasksTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelTasksAdd)
                 .addGap(15, 15, 15))
@@ -232,7 +220,7 @@ public class MainScreen extends javax.swing.JFrame {
         jListProjects.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jListProjects.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jListProjects.setFixedCellHeight(35);
-        jListProjects.setSelectionBackground(new java.awt.Color(245, 218, 122));
+        jListProjects.setSelectionBackground(new java.awt.Color(158, 158, 158));
         jListProjects.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jListProjectsMouseClicked(evt);
@@ -253,7 +241,7 @@ public class MainScreen extends javax.swing.JFrame {
             jPanelProjectListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelProjectListLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPaneList, javax.swing.GroupLayout.DEFAULT_SIZE, 363, Short.MAX_VALUE)
+                .addComponent(jScrollPaneList, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -265,15 +253,15 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelEmptyList.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
         jLabelEmptyListIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelEmptyListIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lists.png"))); // NOI18N
+        jLabelEmptyListIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder(1).png"))); // NOI18N
 
         jLabelEmptyListTitle.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabelEmptyListTitle.setForeground(new java.awt.Color(51, 51, 51));
+        jLabelEmptyListTitle.setForeground(new java.awt.Color(1, 38, 119));
         jLabelEmptyListTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelEmptyListTitle.setText("Nenhuma tarefa por aqui !");
 
         jLabelEmptyListSubtitle.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabelEmptyListSubtitle.setForeground(new java.awt.Color(102, 102, 102));
+        jLabelEmptyListSubtitle.setForeground(new java.awt.Color(1, 38, 119));
         jLabelEmptyListSubtitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelEmptyListSubtitle.setText("Clique no botão \"+\" para adicionar uma nova tarefa.");
 
@@ -292,11 +280,11 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelEmptyListLayout.setVerticalGroup(
             jPanelEmptyListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelEmptyListLayout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addComponent(jLabelEmptyListTitle)
-                .addGap(12, 12, 12)
-                .addComponent(jLabelEmptyListIcon)
+                .addGap(84, 84, 84)
+                .addComponent(jLabelEmptyListTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelEmptyListIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabelEmptyListSubtitle)
                 .addContainerGap())
         );
@@ -323,7 +311,7 @@ public class MainScreen extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanelToolBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelToolBar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelProjects, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -430,8 +418,6 @@ public class MainScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelEmptyListIcon;
     private javax.swing.JLabel jLabelEmptyListSubtitle;
     private javax.swing.JLabel jLabelEmptyListTitle;
@@ -458,8 +444,8 @@ public class MainScreen extends javax.swing.JFrame {
         
      jTableTasks.getTableHeader().setFont(new Font("Century Gothic",
              Font.BOLD,16));
-     jTableTasks.getTableHeader().setBackground(new Color(153,102,45));
-     jTableTasks.getTableHeader().setForeground(new Color(0,0,0));
+     jTableTasks.getTableHeader().setBackground(new Color(94, 205, 224));
+     jTableTasks.getTableHeader().setForeground(new Color(255,255,255));
      
      jTableTasks.getColumnModel().getColumn(2)
              .setCellRenderer(new DeadlineColumnCellRenderer());
